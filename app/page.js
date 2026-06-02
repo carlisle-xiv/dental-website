@@ -317,7 +317,7 @@ export default function Home() {
             <Phone size={18} />
             050 353 2625
           </a>
-          <a className="button button-light" href="#home">
+          <a className="button button-light" href="https://maps.app.goo.gl/PNQWcQcmm3z2a1WQ6?g_st=iw" target="_blank" rel="noopener noreferrer">
             Visit the Clinic
           </a>
         </div>
