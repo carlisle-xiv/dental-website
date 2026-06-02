@@ -1,0 +1,858 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("https://framerusercontent.com/third-party-assets/fontshare/wf/2TYFCBHUANEXS6QGR5EQDUNAFH6LSWM3/AYNOU3VEA4LRTDNKJQUFNVNUTYSGOUOP/UXO4O7K2G3HI3D2VKD7UXVJVJD26P4BQ.woff2")
+    format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("https://framerusercontent.com/third-party-assets/fontshare/wf/BNWG6MUI4RTC6WEND2VPDH4MHMIVU3XZ/R5YXY5FMVG6PXU36GNEEA24MIPMEPGSM/CIM4KQCLZSMMLWPVH25IDDSTY4ENPHEY.woff2")
+    format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("https://framerusercontent.com/third-party-assets/fontshare/wf/6U2SGH566NSNERG6RGEV3DSNEK7DL2RF/JRDYRKMSAW2H35IWEQIPL67HAJQ35MG5/JNU3GNMUBPWW6V6JTED3S27XL5HN7NM5.woff2")
+    format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("https://framerusercontent.com/third-party-assets/fontshare/wf/NGBUP45ES3F7RD5XGKPEDJ6QEPO4TMOK/EXDVWJ2EDDVVV65UENMX33EDDYBX6OF7/6P4FPMFQH7CCC7RZ4UU4NKSGJ2RLF7V5.woff2")
+    format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("https://framerusercontent.com/third-party-assets/fontshare/wf/MH5EUMJLFHOACOC5EPWMZKGKE6C676DA/B6XSSNJX2SESKDWPNWH4WCP2CJSK4NIU/YV7HPRET3QHJIMR56F6TM2MVPYSI4S5Z.woff2")
+    format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("https://framerusercontent.com/third-party-assets/fontshare/wf/ZSCEK7S4VBCWIURNDFQ4JMFGVSANTY3E/NU7JB62SOLQOUPO3QU2C52CLGXBBG2WE/EHWSSXP2VWBWZLNGMJRPPQDBKQGP7BTU.woff2")
+    format("woff2");
+  font-display: block;
+  font-style: normal;
+  font-weight: 900;
+}
+
+:root {
+  --ink: #030303;
+  --muted: #3b3b3b;
+  --paper: #f2eeec;
+  --white: #ffffff;
+  --line: rgba(77, 79, 84, 0.12);
+  --clay: #963f36;
+  --clay-dark: #7f352e;
+  --soft: #faf7f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: "Manrope", "Manrope Placeholder", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+main {
+  overflow: hidden;
+  background: var(--white);
+}
+
+.offer-bar {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.offer-bar span {
+  color: var(--clay);
+  margin: 0 4px;
+}
+
+.nav-shell {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  display: flex;
+  height: 104px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 30px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3.2vw, 38px);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav-actions {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  gap: 2px;
+  border-radius: 50px;
+  background: var(--white);
+  padding: 6px;
+}
+
+.nav-actions a {
+  display: inline-flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 58px;
+  padding: 0 18px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav-actions .nav-cta {
+  background: var(--clay);
+  color: var(--white);
+  padding: 0 24px;
+}
+
+.mobile-menu {
+  display: none;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--ink);
+}
+
+.hero {
+  position: relative;
+  height: clamp(640px, 63vw, 780px);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.hero-image-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-image,
+.cover-image {
+  object-fit: cover;
+}
+
+.hero-image {
+  object-position: center center;
+}
+
+.hero-copy {
+  position: absolute;
+  top: 130px;
+  left: 30px;
+  z-index: 2;
+  width: 500px;
+  max-width: 46vw;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Red Hat Display", "Red Hat Display Placeholder", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+.hero-copy p {
+  max-width: 505px;
+  margin: 24px 0 32px;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 39px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 58px;
+  padding: 0 22px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.button-primary {
+  background: var(--clay);
+  color: var(--white);
+}
+
+.button-primary:hover,
+.nav-actions .nav-cta:hover,
+.service-cell a:hover {
+  background: var(--clay-dark);
+}
+
+.button-light {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  max-width: 445px;
+  margin-top: 68px;
+}
+
+.hero-stats strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #000;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.hero-stats span {
+  display: block;
+  color: #111;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.hero-stats div {
+  max-width: 190px;
+}
+
+.care-section,
+.treatments-section,
+.dentist-section,
+.confidence-section {
+  padding: 84px 30px;
+}
+
+.care-section {
+  background: var(--paper);
+}
+
+.center-heading {
+  max-width: 560px;
+  margin: 0 auto 54px;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Red Hat Display", "Red Hat Display Placeholder", sans-serif;
+  font-size: clamp(34px, 4vw, 54px);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.center-heading p,
+.section-intro p,
+.dentist-copy p,
+.confidence-copy p,
+.appointment-section p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.center-heading p {
+  max-width: 420px;
+  margin: 18px auto 0;
+}
+
+.service-table {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+}
+
+.service-cell {
+  display: grid;
+  min-height: 300px;
+  justify-items: center;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 44px 44px 36px;
+  text-align: center;
+}
+
+.service-cell:nth-child(2n) {
+  border-right: 0;
+}
+
+.service-cell:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.service-cell h3 {
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.service-cell p {
+  max-width: 440px;
+  margin: 34px 0 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.service-cell strong {
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.service-cell span {
+  margin: 6px 0 22px;
+  color: var(--clay);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.service-cell a {
+  display: inline-flex;
+  min-height: 39px;
+  align-items: center;
+  border-radius: 58px;
+  background: var(--clay);
+  padding: 0 24px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.treatments-section,
+.dentist-section,
+.confidence-section {
+  background: var(--white);
+}
+
+.section-intro {
+  max-width: 620px;
+  margin-bottom: 48px;
+}
+
+.section-intro p {
+  max-width: 520px;
+  margin-top: 18px;
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.treatment-card {
+  position: relative;
+  display: flex;
+  min-height: 430px;
+  overflow: hidden;
+  align-items: flex-end;
+  border-radius: 12px;
+  padding: 32px;
+  color: var(--white);
+}
+
+.treatment-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.68));
+}
+
+.treatment-card span {
+  position: absolute;
+  top: 28px;
+  left: 32px;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.treatment-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.other-services {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 48px;
+  margin-top: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 42px 34px;
+}
+
+.other-services h3 {
+  margin: 0 0 14px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.other-services p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.other-services ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.other-services li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+  font-weight: 600;
+}
+
+.results-section {
+  background: var(--clay);
+  padding: 86px 30px 72px;
+  color: var(--white);
+  text-align: center;
+}
+
+.results-section h2 {
+  color: var(--white);
+}
+
+.results-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1180px;
+  margin: 42px auto 26px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.result-image {
+  position: relative;
+  min-height: 330px;
+}
+
+.result-image span {
+  position: absolute;
+  top: 24px;
+  z-index: 1;
+  border-radius: 8px;
+  background: #dbf6e9;
+  padding: 8px 12px;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.result-image:first-child span {
+  left: 24px;
+}
+
+.result-image:last-child span {
+  right: 24px;
+}
+
+.results-section p {
+  margin: 0;
+  font-size: 22px;
+}
+
+.dentist-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.dentist-image {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.dentist-copy {
+  max-width: 1180px;
+}
+
+.dentist-copy p {
+  margin: 24px 0 0;
+}
+
+.divider {
+  height: 1px;
+  margin: 42px 0;
+  background: var(--line);
+}
+
+blockquote {
+  max-width: 1040px;
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.proof-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+.confidence-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 54px;
+  align-items: start;
+  padding-top: 0;
+}
+
+.reason-list {
+  display: grid;
+  gap: 30px;
+  margin-top: 44px;
+}
+
+.reason-list article {
+  max-width: 480px;
+}
+
+.reason-list svg {
+  color: var(--clay);
+}
+
+.reason-list h3 {
+  margin: 14px 0 10px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.reason-list p {
+  margin: 0;
+}
+
+.confidence-image {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.appointment-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 36px;
+  align-items: center;
+  margin: 0 30px 30px;
+  border-radius: 12px;
+  background: #111819;
+  padding: 64px;
+  color: var(--white);
+}
+
+.appointment-section h2 {
+  color: var(--white);
+}
+
+.appointment-section p {
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.appointment-actions {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 1200px) {
+  .hero-copy {
+    top: 140px;
+    width: 620px;
+    max-width: 43vw;
+  }
+
+  .hero-copy h1 {
+    font-size: 70px;
+  }
+
+  .hero-copy p {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 980px) {
+  .brand {
+    font-size: 32px;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .offer-bar {
+    display: none;
+  }
+
+  .nav-shell {
+    top: 0;
+    height: 86px;
+    padding: 20px;
+  }
+
+  .brand {
+    font-size: 30px;
+  }
+
+  .hero {
+    display: flex;
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    padding-top: 86px;
+  }
+
+  .hero-image-wrap {
+    position: relative;
+    inset: auto;
+    height: min(72vw, 430px);
+    min-height: 330px;
+    width: 100%;
+  }
+
+  .hero-image {
+    object-position: 56% center;
+  }
+
+  .hero-copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: none;
+    padding: 34px 20px 58px;
+    background: var(--white);
+  }
+
+  .hero-copy h1 {
+    max-width: 440px;
+    font-size: 40px;
+  }
+
+  .hero-copy p {
+    max-width: 440px;
+    margin: 20px 0 26px;
+  }
+
+  .hero-stats,
+  .service-table,
+  .treatment-grid,
+  .other-services,
+  .results-pair,
+  .confidence-section,
+  .appointment-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    gap: 24px;
+    margin-top: 44px;
+  }
+
+  .service-cell,
+  .service-cell:nth-child(2n),
+  .service-cell:nth-last-child(-n + 2) {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .service-cell:last-child {
+    border-bottom: 0;
+  }
+
+  .other-services ul {
+    grid-template-columns: 1fr;
+  }
+
+  .confidence-section {
+    padding-top: 72px;
+  }
+
+  .appointment-section {
+    margin-inline: 20px;
+    padding: 36px;
+  }
+}
+
+@media (max-width: 620px) {
+  .brand {
+    max-width: calc(100vw - 96px);
+    overflow: hidden;
+    font-size: 28px;
+    text-overflow: ellipsis;
+  }
+
+  .hero-copy h1 {
+    font-size: 38px;
+  }
+
+  .care-section,
+  .treatments-section,
+  .dentist-section,
+  .confidence-section {
+    padding: 70px 20px;
+  }
+
+  .service-cell,
+  .other-services,
+  .treatment-card {
+    padding-inline: 24px;
+  }
+
+  .treatment-card,
+  .result-image,
+  .dentist-image,
+  .confidence-image {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: 25px;
+  }
+
+  .hero-copy h1 {
+    font-size: 36px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+}
