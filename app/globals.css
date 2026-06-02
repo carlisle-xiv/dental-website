@@ -58,8 +58,8 @@
   --paper: #f2eeec;
   --white: #ffffff;
   --line: rgba(77, 79, 84, 0.12);
-  --clay: #963f36;
-  --clay-dark: #7f352e;
+  --clay: #3577b8;
+  --clay-dark: #2a63a0;
   --soft: #faf7f5;
 }
 
@@ -134,7 +134,7 @@ main {
 .brand {
   display: inline-flex;
   align-items: center;
-  color: var(--ink);
+  color: var(--clay);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(30px, 3.2vw, 38px);
   font-weight: 700;
@@ -197,6 +197,15 @@ main {
   position: absolute;
   inset: 0;
   overflow: hidden;
+}
+
+.hero-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to right, var(--white) 28%, transparent 52%);
+  pointer-events: none;
 }
 
 .hero-image,
